@@ -31,7 +31,9 @@ public class Post{
 
     @Column(nullable = false)
     private Long price;
+}
 
+    /*
     @Column(name="participant_limit", nullable = false)
     private Long participantLimit;
 
@@ -49,5 +51,6 @@ public class Post{
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private PostStatus poststatus;
-}
+    private PostStatus poststatus;}
+    
+    */
