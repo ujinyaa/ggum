@@ -1,5 +1,47 @@
 package com.example.ggum.domain.post.entity;
 
+import com.example.ggum.domain.user.entity.User;
+
+public class Post {
+    private User user;        // private 필드
+    private String title;     // private 필드
+    private String content;   // private 필드
+    private String postCategory;
+    private Long price;
+
+    // 생성자
+    public Post(User user, String title, String content, String postCategory, Long price) {
+        this.user = user;
+        this.title = title;
+        this.content = content;
+        this.postCategory = postCategory;
+        this.price= price;
+    }
+
+    // Getter 메서드
+    public User getUser() {
+        return user;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+    public String getpostCategory(){
+        return postCategory;
+    }
+    public Long price(){
+        return  price;
+    }
+    
+}
+
+/*
+package com.example.ggum.domain.post.entity;
+
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -32,6 +74,9 @@ public class Post{
     @Column(nullable = false)
     private Long price;
 }
+
+
+*/
 
     /*
     @Column(name="participant_limit", nullable = false)
