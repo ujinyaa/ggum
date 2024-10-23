@@ -22,20 +22,8 @@ public class User {
     private Long id;
 
     @Column(nullable=false)
-    private String username;
-
-    @Column(nullable=false)
-    private String email;
-
-    @Column(nullable=false)
     private String password;
 
-    @Column(nullable=false)
-    private String role;
 
-    @Column(nullable=false)
-    private long likeCount;
 
-    @Column(nullable=false)
-    private long dislikeCount;
 }
