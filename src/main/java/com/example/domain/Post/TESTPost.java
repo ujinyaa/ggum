@@ -9,34 +9,17 @@ import com.example.ggum.domain.user.entity.User;
 @Entity
 @NoArgsConstructor
 @Getter
-public class TESTPost {
+public class TESTPostData {
+    public static void main(String[] args) {
+        // 유저 데이터 생성 (아이디는 이름을 소문자로 설정)
+        User alice = new User(1L, "alice", "1234*", "Alice");
+        User bob = new User(2L, "bob", "1234*", "Bob");
+        User charlie = new User(3L, "charlie", "1234*", "Charlie");
+        User daisy = new User(4L, "daisy", "1234*", "Daisy");
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "post_id")
-    private Long id;
+        // 게시글 데이터 생성
+        TESTPost post1 = new TESTPost(alice, "Fresh Apples", "Delicious red apples from farm", "apple", 599L);
+        TESTPost post2 = new TESTPost(bob, "Organic Bananas", "Fresh and organic bananas", "banana", 349L);
+        TESTPost post3 = new TESTPost(charlie, "Latest Smartphone", "New smartphone with 5G", "cell", 79999L);
+        TESTPost post4 = new TESTPost(daisy, "Labrador Puppy", "6-month old Labrador puppy", "dog", 29999L);
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
-
-    @Column(nullable = false)
-    private String title;
-
-    @Column(nullable = false)
-    private String content;
-
-    @Column(nullable = false)
-    private String postCategory;
-
-    @Column(nullable = false)
-    private Long price;
-
-    public TESTPost(User user, String title, String content, String postCategory, Long price) {
-        this.user = user;
-        this.title = title;
-        this.content = content;
-        this.postCategory = postCategory;
-        this.price = price;
-    }
-}
