@@ -1,5 +1,5 @@
 //테스트용으로 간단하게 구현
-package com.example.ggum.domain.user.entity;
+package com.example.ggum.domain.User.entity;
 
 public class User {
     private Long id;          // private 필드
